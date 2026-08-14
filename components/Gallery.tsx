@@ -1,0 +1,4 @@
+"use client";
+import Image from "next/image";
+import { useState } from "react";
+export function Gallery({ images }: { images: string[] }) { const [active, setActive] = useState(0); return <div><div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-pistachio"><Image src={images[active]} alt={`Handmade potli view ${active + 1}`} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" priority /></div><div className="mt-3 flex gap-2 overflow-x-auto pb-1">{images.map((src, index) => <button aria-label={`View product photo ${index + 1}`} onClick={() => setActive(index)} className={`relative h-20 w-16 shrink-0 overflow-hidden rounded-xl border-2 ${active === index ? "border-plum" : "border-transparent"}`} key={src}><Image src={src} alt="" fill sizes="64px" className="object-cover" /></button>)}</div></div>; }

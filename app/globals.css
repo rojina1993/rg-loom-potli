@@ -8,3 +8,7 @@ body { margin: 0; color: #34212d; background: #fffdf9; font-family: Arial, Helve
 ::selection { background: #d292a8; color: #fff; }
 .leaf { border-radius: 55% 45% 55% 45%; }
 .logo-mark { font-family: Georgia, serif; letter-spacing: .16em; }
+
+/* Make the primary navigation easier to read while retaining the refined header. */
+header a[href="#story"] { font-size: 1.125rem; }
+header button { font-size: 1.125rem; padding: 1rem 1.75rem; }
